@@ -1,0 +1,45 @@
+<ng-container *ngIf="gender && clothes && pose && view">
+    <div class="form">
+        <div class="filter">
+            <div class="title">Gender</div>
+            <ng-select
+                [items]="gender.values"
+                bindLabel="name"
+                bindValue="groupId"
+            >
+            </ng-select>
+        </div>
+        <div class="filter">
+            <div class="title">Cloth</div>
+            <ng-select
+                [items]="clothes.values"
+                bindLabel="name"
+                bindValue="groupId"
+            >
+            </ng-select>
+        </div>
+        <div class="filter">
+            <div class="title">Pose</div>
+            <ng-select
+                [items]="pose.values"
+                bindLabel="name"
+                bindValue="groupId"
+            >
+            </ng-select>
+        </div>
+        <div class="filter">
+            <div class="title">View</div>
+            <ng-select
+                [items]="view.values"
+                bindLabel="name"
+                bindValue="groupId"
+            >
+            </ng-select>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="(!gender && clothes && pose && view)">
+    <div>
+        fallback
+    </div>
+</ng-container>
